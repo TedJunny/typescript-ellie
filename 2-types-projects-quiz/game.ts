@@ -20,7 +20,8 @@ function move(direction: Direction) {
       position.x += 1;
       return;
     default:
-      throw new Error("Incorrect direction");
+      const invalid: never = direction;
+      throw new Error(`Incorrect direction: ${invalid}`);
   }
 }
 
